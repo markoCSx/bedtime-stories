@@ -44,12 +44,14 @@ public class BedtimeStories {
             BufferedReader buffReader = new BufferedReader(fileReader);
 
             String line = "";
+            int counter = 1;
             while (line != null) {
                 line = buffReader.readLine();
                 if (line == null){
                     break;
                 }
-                System.out.println(line);
+                System.out.println(counter + ". " + line);
+                counter++;
             }
         }
         catch (FileNotFoundException e) {
